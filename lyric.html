@@ -4,16 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="assets/MoviePlayCard.png">
+    <link rel="script.js"> <!--Try to link js and css page-->
     <!--favicon above-->
     <title>Hooked on a feeling</title>
 </head>
 <body>
     <h1>Hooked on a feeling</h1>
     <h2>By Blue Swede (1968)</h2>
-
+   
+    <button id="button1">Click Me</button>
+    <br>
+    <br>
     <a href="https://www.youtube.com/watch?v=Cx2cEHGA3To">
         Original Music Video
-    </a>
+       </a>
+
 <hr>
 
     <img src="assets/BlueSweed.png">
@@ -22,11 +27,16 @@
     <audio controls autoplay mute loop>
         <source src="Ooga-Chaka.m4a" Type="audio m4a">
         </audio>
+   <hr>
+   <h3>If music player does not play, follow link below</h3>
     <a href="https://music.youtube.com/watch?v=jvFqzD9PtG0&feature=shared">
         Hooked On A Feeling (Ooga Chaka)
     </a>
+    <br>
+    <hr>
+    <button id="Button2">Who is Mr Chaka</button>
 
-    <pre>Ooga-Chaka Ooga-Ooga
+    <pre>>Ooga-Chaka Ooga-Ooga
         Ooga-Chaka Ooga-Ooga
         Ooga-Chaka Ooga-Ooga
         Ooga-Chaka Ooga-Ooga
@@ -49,6 +59,9 @@
         Got a bug from you girl
         But I don't need no cure
         I just stay a victim
+
+        <!--add jS for this button-->
+        <button id="SpecButton1">Deep Inside</button>
 
         If I can for sure
         All the good love
@@ -74,21 +87,81 @@
         That you're in love with me
         I'm hooked on a feeling
     </pre>
-
-
+<hr>
+    <a href="PG2.html">
+        <button id="button3">For More Soundtrack Songs</button>
+    </a>
 
 </body>
 <footer>
-<p>
+
+<!-- Form the action index takes the info to a location, e.g. index.php - Method attribute is a get or a post - Post is for personal and get is public-->
+<h3>If you would like to had Mr. Chaka sing to you, sign in and fill out your personal information</h3>   
+<br>
+<!--the for attribute of our label should match the id attribute  of the tag-->
+<!--if you use "for" the page reader will read "username" for visually imparted-->
+<!--Below you will see enctype if you are sending a large amount of information mulitpart/form-data will send in parts and reconstruct-->
+    <form action="index.php" Method="POST"> enctype="multipart/form-data">
+        <label for="Username">Username</label>
+        <input type="text" id="username" placeholder="username" minlength="6" required>
+        <br>
+        <label for="password">password</label>
+        <input type="password" id="password" minlength="6" required>
+        <br>
+        <label for="email">email</label>
+        <input type="email" id="email" placeholder="rocketman@gmail.com"><br>
+        <label for="phone">phone #180</label>
+        <input type="tel" id="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"><br>
+
+        <h4>Please Provide your birthday for a personalized message</h4>
+        <label for="bday">birthday:</label>
+        <input type="date" id="bday"><br>
+        <h5>How many times would you like to have Mr Chaka sing to you?</h5>
+        <label for="quantity">Quantity</label>
+        <input type="number" id="quantity" min="0" max="99" value="1"><br>
+
+        <label for="title">title:</label>
+        <label for="Mr.">Mr.</label>
+        <input type="radio" id="Mr." value="Mr." name="title">
+        <label for="Ms.">Ms.</label>
+        <input type="radio" id="Ms." value="Ms." name="title">
+        <label for="PhD">PhD</label>
+        <input type="radio" id="PhD" value="PhD" name="title">
+        <label for="SuperHero">SuperHero</label>
+        <input type="radio" id="SuperHero" value="SuperHero" name="title">
+        <br>
+        <h5>Singing is free, however tips are welcome</h5>
+        <label for="payment">payment</label>
+        <select id="payment">
+            <option value="Visa">Visa</option>
+            <option value="AMX">AMX</option>
+            <option value="CashMoney$$">CashMoney$$</option>
+        </select>
+        <label for="Minimum tip $100">Minimum tip $100</label>
+        <input type="checkbox" id="Minimimum tip $100"><br>
+        <label for="comment">Comment</label>
+        <textarea id="comment" rows="5" cols="40"></textarea><br>
+        <label for="file">file</label>
+        <input type="file" id="file" accept="image/png, image/jpeg"><br>
+
+        <hr>
+        </select>
+        <input type="Reset"><br>
+        <input type="Submit">
+
+
+    </form>
+
+
+</footer>
+    <hr>
+    Ooga-Chaka
     Performed by
     Slider
     Written by
     Mark James
-    Music metadata provided by
-    Delta / Laserlight Digital
-</p>
-
-
+    &copy; Music metadata provided by<br>
+    <small>Delta / Laserlight Digital</small>
 </footer>
 
 </html>
